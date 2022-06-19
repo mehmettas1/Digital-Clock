@@ -2,14 +2,14 @@ const hour = document.querySelector(".hours");
 const minute = document.querySelector(".minute");
 const second = document.querySelector(".second");
 const amPm = document.querySelector(".ampm");
-const date = document.querySelector(".date");
+// const date = document.querySelector(".date");
 
 const getTime  = () => {
 
 hour.innerHTML = new Date().getHours() %12;
 minute.innerHTML = new Date().getMinutes();
 second.innerHTML = new Date().getSeconds();
-date.innerHTML = new Date().toDateString();
+// date.innerHTML = new Date().toDateString();
 
 if (new Date().getHours()>12) {
   amPm.textContent = "PM" ; 
