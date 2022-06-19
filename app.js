@@ -6,20 +6,20 @@ const date = document.querySelector(".date");
 
 
 const getTime = ()=> {
-  hour.innerHTML = new Date().getHours();
+  hour.innerHTML = new Date().getHours() %12;
   minute.innerHTML = new Date().getMinutes();
   second.innerHTML = new Date().getSeconds();
   date.innerHTML =  new Date().toDateString();
    
    if (new Date().getHours() >12) { 
-    amPm.innerHTML = "PM";
+    amPm.textContent = "PM";
     
    } else {
-    amPm.innerHTML ="AM"
+    amPm.textContent ="AM"
    }
-   hour.textContent.length = 1 && (hour.textContent = "0"+hour.textContent);
-   minute.textContent.length = 1 && (minute.textContent = "0"+minute.textContent);
-   second.textContent.length = 1 && (second.textContent = "0"+second.textContent);
+   hour.textContent.length == 1 && (hour.textContent = "0" + hour.textContent);
+   minute.textContent.length == 1 && (minute.textContent = "0" + minute.textContent);
+   second.textContent.length == 1 && (second.textContent = "0" + second.textContent);
 };
 
 setInterval(getTime,999);
